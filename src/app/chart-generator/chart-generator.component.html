@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="wrapper">
+        <div class="left">
+            <h3>Select monthly revenue</h3>
+            <label for="revenueFieldJan">January</label>
+            <input id="revenueFieldJan" type="number" [(ngModel)]="revenueJanuary" />
+            <label for="revenueFieldFeb"> February</label>
+            <input id="revenueFieldFeb" type="number" [(ngModel)]="revenueFebruary" />
+            <label for="revenueFieldMar"> March</label>
+            <input id="revenueFieldMar" type="number" [(ngModel)]="revenueMarch" />
+        </div>
+        <div class="right">
+            <h3>Select Color</h3>
+            <label for="colorFieldJan"> Color</label>
+            <select id="colorFieldJan" [(ngModel)]="selectedColors['January']">
+                <option value="red">Red</option>
+                <option value="green" selected>Green</option>
+                <option value="purple">Purple</option>
+                <option value="yellow">Yellow</option>
+                <option value="blue">Blue</option>
+                <option value="grey">Grey</option>
+                <option value="orange">Orange</option>
+            </select>
+    
+            <label for="colorFieldFeb">Color</label>
+            <select id="colorFieldFeb" [(ngModel)]="selectedColors['February']">
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="purple">Purple</option>
+                <option value="yellow">Yellow</option>
+                <option value="blue" selected>Blue</option>
+                <option value="grey">Grey</option>
+                <option value="orange">Orange</option>
+            </select>
+            <label for="colorFieldMar">Color</label>
+            <select id="colorFieldMar" [(ngModel)]="selectedColors['March']" >
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="purple">Purple</option>
+                <option value="yellow" selected>Yellow</option>
+                <option value="blue">Blue</option>
+                <option value="grey">Grey</option>
+                <option value="orange">Orange</option>
+            </select>
+        </div>
+        <div style="clear: both;"></div>
+        <!-- this is select bar type section -->
+        <div class="bar-type">
+            <h3>Graph Type</h3>
+            <div>
+                <label>
+                  <input type="radio" name="chartType" value="column" [(ngModel)]="selectedChartType" (change)="onChartTypeChange()"> Column
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="radio" name="chartType" value="pie" [(ngModel)]="selectedChartType" (change)="onChartTypeChange()"> Pie
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="radio" name="chartType" value="line" [(ngModel)]="selectedChartType" (change)="onChartTypeChange()"> Line
+                </label>
+              </div>
+        </div>
+        <!-- <button (click)="generateChart()">Generate Chart</button> -->
+        <div id="chartContainer"></div>
+    </div>
+</div>
+ 

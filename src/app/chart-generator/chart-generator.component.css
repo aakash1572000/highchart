@@ -1,0 +1,8 @@
+.container{display: flex;justify-content: center;padding-top: 50px;}
+.wrapper{width: 60%;overflow: auto;}
+.left{float: left;width: 50%;}
+.right{float:left;width: 50%;}
+label{display: block;padding-bottom: 10px;}
+.left input{outline: none;width: 85%;height: 30px;margin-bottom: 20px;}
+.right select{ height: 35px; width: 85%; margin-bottom: 20px;}
+.bar-type label{display: inline-block;}
